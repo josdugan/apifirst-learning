@@ -14,7 +14,7 @@ jobs:
       - name: Look at working directory
         run: pwd && ls -al
       - name: Build Docks
-        run: ./make.sh
+        run: .github/workflows/make.sh
       - name: Deploy to Github pages
         uses: peaceiris/actions-gh-pages@v4
         with:
