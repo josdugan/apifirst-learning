@@ -13,4 +13,4 @@ jobs:
       - name: Install Redocly CLI
         run: npm install -g @redocly/cli@latest
       - name: Run Lint Tests
-        run: redocly lint ./openapi/openapi.yaml
+        run: redocly lint ./openapi/openapi.yaml --format=github-actions
