@@ -1,0 +1,8 @@
+type: string
+format: date-time
+description:
+  ISO 8601 Timestamp. Date created and date updated are system managed values,
+  and should not be sent in request payloads - they will be ignored
+example: 2022-08-22T11:43:06-07:00
+title: ISO Timestamp
+readOnly: true
