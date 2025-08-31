@@ -10,10 +10,34 @@ get:
       content:
         application/json:
           schema:
-            type: array
-            items:
-              $ref: ../../components/schemas/v1/order_list.yaml
+            $ref: ../../components/schemas/v1/order_list.yaml
     "400":
       description: Bad Request
     "404":
       description: Not Found
+post: 
+  tags: 
+    -  Order
+  summary: Create new order
+  description: Create a new order.
+  operationId: createOrder
+  requestBody: 
+    content: 
+      application/json:
+        schema: 
+          $ref: ../../components/schemas/v1/order_create.yaml
+  responses: 
+    '201':
+      description: Created
+      headers: 
+        Location:
+          description: Location of the new resource
+          schema: 
+            type: string
+            example: /v1/orders/bec5e7a0-bd40-4380-b787-f1388d171509
+    '400':
+      description: Bad Request
+      content: 
+        application/json:
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml      

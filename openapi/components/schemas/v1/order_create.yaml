@@ -1,0 +1,18 @@
+type: object
+properties:
+  customerId:
+    type: string
+    format: uuid
+  selectedPaymentMethod:
+    type:
+      - string
+      - 'null'
+    format: uuid
+  orderLines:
+    type:
+      - array
+      - 'null'
+    items:
+      $ref: order_line_create.yaml
+required:
+  - customerId

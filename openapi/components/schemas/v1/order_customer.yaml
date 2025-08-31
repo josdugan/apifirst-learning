@@ -11,7 +11,9 @@ properties:
   billToAddress:
     $ref: address.yaml
   email:
-    type: string
+    type:
+      - string
+      - 'null'
     description: The email address of the customer
   phone:
     type: string
